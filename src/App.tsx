@@ -3,6 +3,8 @@
 import ClassComponent from "./components/ClassComponent.tsx";
 import FunctionalComponent from "./components/FunctionalComponent.tsx";
 import ArrowFunctionalComponent from "./components/ArrowFunctionalComponent.tsx";
+import ArrowFunctionalComponentWithProps from "./components/ArrowFunctionalComponentWithProps.tsx";
+import ArrowFunctionalComponentWithPropsType from "./components/ArrowFunctionalComponentWithPropsType.tsx";
 
 function App() {
 
@@ -12,6 +14,12 @@ function App() {
         <ClassComponent />
         <FunctionalComponent />
         <ArrowFunctionalComponent />
+        <ArrowFunctionalComponentWithProps title="Is An Arrow Functional Component with Props" />
+        <ArrowFunctionalComponentWithProps />
+        <ArrowFunctionalComponentWithProps title="Second Arrow Functional Component with Props" />
+        <ArrowFunctionalComponentWithPropsType
+            title="Third Arrow Functional Component with Props"
+            description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, similique!"/>
     </>
   )
 }
