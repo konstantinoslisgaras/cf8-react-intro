@@ -4,10 +4,10 @@ const Counter =() => {
     const [count, setCount] = React.useState(1);
 
     const increaseCount = () => {
-        setCount(count * (Math.random() * 5));
+        setCount(count + 5);
     }
     const decreaseCount = () => {
-        setCount(count - (Math.random() * 10));
+        setCount(count - 5);
     }
     const resetCount = () => {
         setCount(1);
