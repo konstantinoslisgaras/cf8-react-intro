@@ -1,21 +1,31 @@
 import {useState} from "react";
 import CounterButton from "./CounterButton.tsx";
 
-const Counter = () => {
+const CounterWithMoreStates = () => {
     const [count, setCount] = useState(0);
+    const [lastAction, setLastAction] = useState("");
+    const [time, setTime] = useState("");
+
+    const getCurrentTime = () => new Date().toTimeString().slice(0, 10);
 
     const increaseCount = () => {
-        setCount(count + 1);
+        setCount(count + 14);
+        setLastAction("Increase");
+        setTime(getCurrentTime());
     }
 
     const decreaseCount = () => {
         if (count > 0){
-            setCount(count - 1);
+            setCount(count - 14);
         }
+        setLastAction("Decrease");
+        setTime(getCurrentTime());
     }
 
     const resetCount = () => {
         setCount(0);
+        setLastAction("Reset");
+        setTime(getCurrentTime());
     }
 
     return (
@@ -38,7 +48,10 @@ const Counter = () => {
                     addClasses="bg-cf-dark-red disabled:bg-red-500"
                 />
             </div>
+            <p className="text-center text-cf-gray pt-8">
+                Last Change: <strong>{lastAction || "-"}</strong> at <strong>{time || "-"}</strong>
+            </p>
         </>
     )
 }
-export default Counter;
+export default CounterWithMoreStates;
