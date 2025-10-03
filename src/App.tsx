@@ -26,6 +26,8 @@ import Timer from "./components/Timer.tsx";
 import WindowSize from "./components/WindowSize.tsx";
 // import Footer from "./components/Footer.tsx";
 import FocusInput from "./components/FocusInput.tsx";
+import PreviousValue from "./components/PreviousValue.tsx";
+import CounterWithRef from "./components/CounterWithRef.tsx";
 
 function App() {
 
@@ -63,6 +65,8 @@ function App() {
             <Timer />
             <WindowSize />
             <FocusInput />
+            <PreviousValue />
+            <CounterWithRef />
         </Layout>
     </>
   )
